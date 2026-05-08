@@ -1,0 +1,582 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Square Shop — Premium online store</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header fixed-top bg-white border-bottom">
+        <div class="container-fluid px-4 px-lg-5">
+            <nav class="navbar navbar-expand-lg navbar-light p-0">
+                <a class="navbar-brand p-0" href="#page1">
+                    <span class="brand-icon rounded-circle"></span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav ms-3 mb-2 mb-lg-0 align-items-center">
+                        <li class="nav-item"><a class="nav-link" href="#page1">Business types</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#page2">Products</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#page3">Hardware</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#page8">Pricing</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#page9">What's new</a></li>
+                    </ul>
+                    <div class="ms-auto d-flex align-items-center gap-2 header-actions">
+                        <a href="#" id="signInLink" class="nav-link header-action-link" data-action="sign-in">Sign in</a>
+                        <a href="#" id="supportLink" class="nav-link header-action-link" data-action="support">Support</a>
+                        <button id="searchButton" class="btn btn-outline-secondary btn-icon" aria-label="Search">
+                            <span class="search-icon"></span>
+                        </button>
+                        <button id="cartButton" class="btn btn-outline-secondary btn-icon position-relative" aria-label="Cart">
+                            <span class="cart-icon"></span>
+                            <span class="cart-count badge rounded-pill bg-primary text-white position-absolute top-0 start-100 translate-middle">0</span>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="site-subnav bg-white border-top">
+            <div class="container-fluid px-4 px-lg-5">
+                <div class="d-flex flex-column flex-md-row align-items-center justify-content-between gap-3 py-3">
+                    <span class="eyebrow text-uppercase mb-0">Websites</span>
+                    <div class="d-flex flex-column flex-sm-row align-items-center gap-2">
+                        <nav class="nav gap-3">
+                            <a class="nav-link active" href="#page1">Overview</a>
+                            <a class="nav-link" href="#page3">Themes</a>
+                            <a class="nav-link" href="#page8">Pricing</a>
+                        </nav>
+                        <a href="#page3" class="btn btn-outline-primary btn-sm">Create your site</a>
+                        <a href="#page9" class="btn btn-primary btn-sm">Contact sales</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="page1" class="hero-section">
+            <div class="container">
+                <div class="hero-content text-center mx-auto">
+                    <p class="eyebrow text-uppercase mb-3">Websites</p>
+                    <h1 class="display-1 fw-bold mb-4 hero-title">Build a free online store that sells itself</h1>
+                    <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center mb-5">
+                        <a href="#page3" class="btn btn-outline-primary btn-lg">Create your site</a>
+                        <a href="#page9" class="btn btn-primary btn-lg">Contact sales</a>
+                    </div>
+                </div>
+                <div class="hero-media rounded-4 overflow-hidden shadow-lg mt-4">
+                    <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=1400&q=80" alt="Online shopping experience" class="img-fluid w-100">
+                </div>
+            </div>
+        </section>
+
+        <section id="page2" class="section-light py-6">
+            <div class="container-fluid py-5">
+                <div class="text-center mb-5">
+                    <h2 class="section-title mb-0">Everything you need in one integrated system</h2>
+                </div>
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-5 px-4 px-lg-5">
+                        <div class="feature-card rounded-4 shadow-sm p-4 mb-4 bg-white">
+                            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80" alt="Sales analysis" class="img-fluid rounded-4 mb-4">
+                            <h5 class="fw-bold mb-2">Connect in-person and online sales</h5>
+                            <p class="text-muted mb-0">Your online store integrates with Square Point of Sale to give you a full picture of your business.</p>
+                        </div>
+                        <div class="profile-card rounded-4 shadow-sm p-4 mb-4">
+                            <div class="d-flex align-items-center gap-3 mb-4">
+                                <div class="avatar rounded-circle">ER</div>
+                                <div>
+                                    <h6 class="fw-bold mb-0">Elisa Rizzo</h6>
+                                    <p class="text-muted small mb-0">Customer insights</p>
+                                </div>
+                            </div>
+                            <div class="chat-feed mb-3">
+                                <div class="chat-bubble chat-bubble-left">
+                                    <p class="fw-semibold mb-1">New customer segment found</p>
+                                    <p class="text-muted small mb-0">Your loyalty members are purchasing 23% more this quarter.</p>
+                                </div>
+                                <div class="chat-bubble chat-bubble-right">
+                                    <p class="fw-semibold mb-1">Inventory note</p>
+                                    <p class="text-muted small mb-0">Low stock on the best-selling tote bag.</p>
+                                </div>
+                                <div class="chat-bubble chat-bubble-left">
+                                    <p class="fw-semibold mb-1">Rewards ready</p>
+                                    <p class="text-muted small mb-0">Redeem 120 points for free shipping.</p>
+                                </div>
+                            </div>
+                            <div class="loyalty-row rounded-4 p-3 bg-white d-flex align-items-center justify-content-between">
+                                <div>
+                                    <p class="text-uppercase text-muted small mb-1">Loyalty & rewards</p>
+                                    <p class="mb-0 text-muted">Track points and redeem offers.</p>
+                                </div>
+                                <a href="#" class="text-primary small fw-semibold">Redeem</a>
+                            </div>
+                        </div>
+                        <div>
+                            <h5 class="fw-bold mb-2">Stay close to customers</h5>
+                            <p class="text-muted">See customer data like sales history, loyalty points, and more in a central directory that includes all channels.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 px-4 px-lg-5">
+                        <div class="image-panel rounded-4 overflow-hidden shadow-lg mb-4">
+                            <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1200&q=80" alt="Inventory tracking" class="img-fluid w-100">
+                        </div>
+                        <div class="inventory-copy">
+                            <h5 class="fw-bold mb-2">Keep track of inventory</h5>
+                            <p class="text-muted mb-0">Manage inventory across all store locations and sales channels so you never oversell.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="page3" class="py-6">
+            <div class="container py-5">
+                <h2 class="section-title text-center mb-5">Go big with your brand</h2>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="theme-card rounded-4 overflow-hidden shadow-sm" role="button" tabindex="0" data-theme="Stock your pantry today" data-image="https://images.unsplash.com/photo-1517685352821-92cf88aee5a5?auto=format&fit=crop&w=800&q=80">
+                            <img src="https://images.unsplash.com/photo-1517685352821-92cf88aee5a5?auto=format&fit=crop&w=800&q=80" alt="Stock your pantry" class="img-fluid w-100">
+                            <div class="p-4">
+                                <h5 class="fw-bold mb-1">Stock your pantry today</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="theme-card rounded-4 overflow-hidden shadow-sm" role="button" tabindex="0" data-theme="Grow Together" data-image="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80">
+                            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80" alt="Grow Together" class="img-fluid w-100">
+                            <div class="p-4">
+                                <h5 class="fw-bold mb-1">Grow Together</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="theme-card rounded-4 overflow-hidden shadow-sm" role="button" tabindex="0" data-theme="Hand-Selected Wines" data-image="https://images.unsplash.com/photo-1510626176961-4b67d4b2d45a?auto=format&fit=crop&w=800&q=80">
+                            <img src="https://images.unsplash.com/photo-1510626176961-4b67d4b2d45a?auto=format&fit=crop&w=800&q=80" alt="Hand-Selected Wines" class="img-fluid w-100">
+                            <div class="p-4">
+                                <h5 class="fw-bold mb-1">Hand-Selected Wines</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-4 justify-content-center mt-3">
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="theme-card rounded-4 overflow-hidden shadow-sm" role="button" tabindex="0" data-theme="Renewal Spa" data-image="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=800&q=80">
+                            <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=800&q=80" alt="Renewal Spa" class="img-fluid w-100">
+                            <div class="p-4">
+                                <h5 class="fw-bold mb-1">Renewal Spa</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="theme-card rounded-4 overflow-hidden shadow-sm" role="button" tabindex="0" data-theme="More Flora" data-image="https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&w=800&q=80">
+                            <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&w=800&q=80" alt="More Flora" class="img-fluid w-100">
+                            <div class="p-4">
+                                <h5 class="fw-bold mb-1">More Flora</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="theme-card rounded-4 overflow-hidden shadow-sm" role="button" tabindex="0" data-theme="Just Flowers" data-image="https://images.unsplash.com/photo-1492715496824-44d4f3a26aa8?auto=format&fit=crop&w=800&q=80">
+                            <img src="https://images.unsplash.com/photo-1492715496824-44d4f3a26aa8?auto=format&fit=crop&w=800&q=80" alt="Just Flowers" class="img-fluid w-100">
+                            <div class="p-4">
+                                <h5 class="fw-bold mb-1">Just Flowers</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-5">
+                    <a href="#page4" class="btn btn-dark btn-lg">Explore Themes</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="page4" class="section-light py-6">
+            <div class="container py-5">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-5">
+                        <div class="rounded-4 overflow-hidden shadow-lg image-card">
+                            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80" alt="Premium shopping experience" class="img-fluid w-100">
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <h2 class="section-title mb-4">Create a premium online shopping experience</h2>
+                        <div class="row g-4">
+                            <div class="col-sm-6">
+                                <div class="feature-strip rounded-4 p-4 h-100 shadow-sm">
+                                    <h5 class="fw-bold mb-2">Personalize online shopping</h5>
+                                    <p>Let customers create accounts to track orders and see tailored product recommendations.</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="feature-strip rounded-4 p-4 h-100 shadow-sm">
+                                    <h5 class="fw-bold mb-2">Get your products in customers&apos; carts</h5>
+                                    <p>Intuitive design makes it easy to scroll, shop, and check out on mobile browsers.</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="feature-strip rounded-4 p-4 h-100 shadow-sm">
+                                    <h5 class="fw-bold mb-2">Highlight specific products</h5>
+                                    <p>Put a spotlight on new products, top sellers, sale items, or related products.</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="feature-strip rounded-4 p-4 h-100 shadow-sm">
+                                    <h5 class="fw-bold mb-2">Schedule sales and create hype</h5>
+                                    <p>Plan product drops and flash sales, then promote with pop-ups and banners.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="page5" class="py-6">
+            <div class="container py-5">
+                <h2 class="section-title text-center mb-5">Offer shipping, in-store pickup, and delivery</h2>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-md-4">
+                        <div class="shipping-card rounded-4 p-4 text-center h-100 shadow-sm" role="button" tabindex="0" data-shipping="Real-time shipping rates">
+                            <div class="shipping-icon mb-4">📦</div>
+                            <h5 class="fw-bold mb-2">Real-time shipping rates</h5>
+                            <p class="text-muted">Get discounts on shipping and calculate accurate rates in real time.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="shipping-card rounded-4 p-4 text-center h-100 shadow-sm" role="button" tabindex="0" data-shipping="Free in-store pickup">
+                            <div class="shipping-icon mb-4">🏬</div>
+                            <h5 class="fw-bold mb-2">Free in-store pickup</h5>
+                            <p class="text-muted">Give customers the option to pick up online orders at your store for free.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="shipping-card rounded-4 p-4 text-center h-100 shadow-sm" role="button" tabindex="0" data-shipping="Local delivery">
+                            <div class="shipping-icon mb-4">🚚</div>
+                            <h5 class="fw-bold mb-2">Local delivery</h5>
+                            <p class="text-muted">Deliver locally with third-party couriers or your own staff.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="page6" class="section-light py-6">
+            <div class="container py-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-5">
+                        <h2 class="section-title mb-4">Widen your reach. Make more sales.</h2>
+                        <div class="accordion" id="reachAccordion">
+                            <div class="accordion-item mb-3 rounded-4 shadow-sm border-0">
+                                <h2 class="accordion-header" id="reachHeadingOne">
+                                    <button class="accordion-button rounded-4 fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#reachOne" aria-expanded="true">
+                                        Show up everywhere
+                                    </button>
+                                </h2>
+                                <div id="reachOne" class="accordion-collapse collapse show" data-bs-parent="#reachAccordion">
+                                    <div class="accordion-body">Grow with built-in SEO tools and integrations with Google and Meta.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item mb-3 rounded-4 shadow-sm border-0">
+                                <h2 class="accordion-header" id="reachHeadingTwo">
+                                    <button class="accordion-button rounded-4 collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#reachTwo">
+                                        Send personalized promotions
+                                    </button>
+                                </h2>
+                                <div id="reachTwo" class="accordion-collapse collapse" data-bs-parent="#reachAccordion">
+                                    <div class="accordion-body">Create tailored offers that help bring customers back and boost average order value.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item mb-3 rounded-4 shadow-sm border-0">
+                                <h2 class="accordion-header" id="reachHeadingThree">
+                                    <button class="accordion-button rounded-4 collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#reachThree">
+                                        Reward loyal customers
+                                    </button>
+                                </h2>
+                                <div id="reachThree" class="accordion-collapse collapse" data-bs-parent="#reachAccordion">
+                                    <div class="accordion-body">Build customer loyalty with points, discounts, and repeat purchase incentives.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item mb-3 rounded-4 shadow-sm border-0">
+                                <h2 class="accordion-header" id="reachHeadingFour">
+                                    <button class="accordion-button rounded-4 collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#reachFour">
+                                        Sell gift cards
+                                    </button>
+                                </h2>
+                                <div id="reachFour" class="accordion-collapse collapse" data-bs-parent="#reachAccordion">
+                                    <div class="accordion-body">Offer digital and physical gift cards to grow revenue and attract repeat buyers.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="reach-visual rounded-4 shadow-lg p-4">
+                            <div class="row g-3">
+                                <div class="col-md-8">
+                                    <div class="visual-panel rounded-4 p-4 bg-white h-100 shadow-sm">
+                                        <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80" alt="Reach display" class="img-fluid rounded-4 mb-4">
+                                        <p class="mb-0 text-muted">Capture more customers and bring your brand in front of new audiences online.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="small-card rounded-4 p-4 bg-white shadow-sm h-100">
+                                        <h6 class="fw-bold">Shop now</h6>
+                                        <p class="text-muted">A polished product card for your storefront.</p>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="small-card rounded-4 p-4 bg-white shadow-sm">
+                                        <h6 class="fw-bold">Search & discover</h6>
+                                        <p class="text-muted mb-0">Simple product search helps customers find what they want quickly.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="page7" class="py-6">
+            <div class="container py-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-4">
+                        <div class="stat-card rounded-4 shadow-lg p-5 text-center h-100">
+                            <h1 class="display-1 fw-bold mb-3">38%</h1>
+                            <p class="lead mb-0">Average increase in revenue by Square sellers who added a website.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="testimonial-card rounded-4 shadow-lg p-5 h-100">
+                            <div class="testimonial-avatar mb-4">
+                                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80" alt="Store owner" class="rounded-circle">
+                            </div>
+                            <p class="testimonial-text mb-4">“I have a transitory customer base, and Square Online has allowed me to offer the entire store online. This way, even when customers are back home, we stay on their minds, providing a continuous connection and driving additional business.”</p>
+                            <div class="testimonial-meta d-flex align-items-center gap-3">
+                                <div class="logo-placeholder"></div>
+                                <div>
+                                    <p class="mb-1 fw-bold">Cadah Goulet</p>
+                                    <p class="text-muted mb-0">Poor George, Cold Spring, NY</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="page8" class="section-light py-6">
+            <div class="container py-5">
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-start mb-5 gap-3">
+                    <div>
+                        <h2 class="section-title mb-2">Pick a plan for any stage</h2>
+                        <p class="text-muted">No locked-in contracts. Upgrade or cancel anytime.</p>
+                    </div>
+                    <a href="#" class="btn btn-outline-primary">Learn more</a>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="pricing-card rounded-4 p-5 shadow-sm h-100">
+                            <span class="badge bg-light text-dark mb-3">Square Free</span>
+                            <h3 class="fw-bold mb-1">$0/mo.</h3>
+                            <p class="text-muted mb-4">per location</p>
+                            <a href="#page9" class="btn btn-outline-primary w-100 mb-4">Create your free site</a>
+                            <ul class="pricing-list list-unstyled mb-0">
+                                <li>Website builder with SEO tools</li>
+                                <li>Pickup, local delivery, and shipping</li>
+                                <li>Sell on search and social</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="pricing-card pricing-card-highlight rounded-4 p-5 shadow-lg h-100">
+                            <span class="badge bg-primary text-white mb-3">Square Plus</span>
+                            <h3 class="fw-bold mb-1">$49/mo.</h3>
+                            <p class="text-muted mb-4">per location</p>
+                            <a href="#page9" class="btn btn-primary w-100 mb-4">Try free for 30 days</a>
+                            <ul class="pricing-list list-unstyled mb-0">
+                                <li>Expanded site customization</li>
+                                <li>Advanced item settings</li>
+                                <li>QR code ordering and subscriptions</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="pricing-card rounded-4 p-5 shadow-sm h-100">
+                            <span class="badge bg-light text-dark mb-3">Square Premium</span>
+                            <h3 class="fw-bold mb-1">$149/mo.</h3>
+                            <p class="text-muted mb-4">per location</p>
+                            <a href="#page9" class="btn btn-outline-primary w-100 mb-4">Try free for 30 days</a>
+                            <ul class="pricing-list list-unstyled mb-0">
+                                <li>Real-time shipping rates</li>
+                                <li>Advanced reporting</li>
+                                <li>24/7 support</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="custom-pricing-card rounded-4 shadow-sm p-5 mt-5 d-flex flex-column flex-md-row align-items-center justify-content-between gap-4">
+                    <div>
+                        <h4 class="fw-bold">Square Pro</h4>
+                        <p class="text-muted mb-2">Get custom pricing</p>
+                        <p class="text-muted small mb-0">If you process over $250,000 per year, talk to our team to see if you’re eligible for custom pricing. You can also ask about hardware discounts, onboarding and implementation support, technical specialists, and account management.</p>
+                    </div>
+                    <a href="#page9" class="btn btn-primary">Talk to our team</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="page9" class="py-6">
+            <div class="container py-5">
+                <div class="row align-items-center mb-5">
+                    <div class="col-lg-6">
+                        <h2 class="section-title mb-4">Learn how to make it happen</h2>
+                    </div>
+                </div>
+                <div class="row g-4 mb-5">
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="resource-card rounded-4 overflow-hidden shadow-sm">
+                            <img src="https://images.unsplash.com/photo-1519337265831-281ec6cc8514?auto=format&fit=crop&w=800&q=80" alt="Resource preview" class="img-fluid w-100">
+                            <div class="p-3">
+                                <h6 class="fw-bold mb-2">How to Start a Free Online Store</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="resource-card rounded-4 overflow-hidden shadow-sm">
+                            <img src="https://images.unsplash.com/photo-1523475496153-3d6cc91831a1?auto=format&fit=crop&w=800&q=80" alt="Resource preview" class="img-fluid w-100">
+                            <div class="p-3">
+                                <h6 class="fw-bold mb-2">How to Increase Orders</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="resource-card rounded-4 overflow-hidden shadow-sm">
+                            <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=800&q=80" alt="Resource preview" class="img-fluid w-100">
+                            <div class="p-3">
+                                <h6 class="fw-bold mb-2">Cupcake Wars Winner</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="resource-card rounded-4 overflow-hidden shadow-sm">
+                            <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=800&q=80" alt="Resource preview" class="img-fluid w-100">
+                            <div class="p-3">
+                                <h6 class="fw-bold mb-2">The Future of Commerce</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-4 mb-5">
+                    <div class="col-lg-8">
+                        <div class="faq-card rounded-4 shadow-sm p-4">
+                            <h3 class="fw-bold mb-4">FAQ</h3>
+                            <div class="accordion" id="faqAccordion">
+                                <div class="accordion-item rounded-4 mb-3">
+                                    <h2 class="accordion-header" id="faqOne">
+                                        <button class="accordion-button collapsed rounded-4" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne">
+                                            Why did Square Online change to websites?
+                                        </button>
+                                    </h2>
+                                    <div id="faqCollapseOne" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                        <div class="accordion-body">Square Websites offers more flexibility, design options, and tools for modern online selling.</div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item rounded-4 mb-3">
+                                    <h2 class="accordion-header" id="faqTwo">
+                                        <button class="accordion-button collapsed rounded-4" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo">
+                                            How do I start my website for free?
+                                        </button>
+                                    </h2>
+                                    <div id="faqCollapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                        <div class="accordion-body">Start with the free plan and customize your site with templates, products, and branding.</div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item rounded-4 mb-3">
+                                    <h2 class="accordion-header" id="faqThree">
+                                        <button class="accordion-button collapsed rounded-4" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseThree">
+                                            How to create an online store?
+                                        </button>
+                                    </h2>
+                                    <div id="faqCollapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                        <div class="accordion-body">Use the guided setup, add products, set up payments, and choose shipping options.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="try-square-card rounded-4 shadow-sm p-4 h-100 d-flex flex-column justify-content-between">
+                            <div>
+                                <h3 class="fw-bold">Try Square</h3>
+                                <p class="text-muted">Learn about new features and hear stories from other businesses running on Square.</p>
+                            </div>
+                            <form class="mt-4">
+                                <div class="mb-3">
+                                    <input type="email" class="form-control" placeholder="Email address">
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer bg-dark text-light py-5">
+        <div class="container py-4">
+            <div class="row gy-4">
+                <div class="col-md-3">
+                    <h6 class="text-uppercase mb-3">Products</h6>
+                    <ul class="footer-list list-unstyled">
+                        <li><a href="#">Point of sale</a></li>
+                        <li><a href="#">Payments</a></li>
+                        <li><a href="#">Websites</a></li>
+                        <li><a href="#">Marketing</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="text-uppercase mb-3">Business Types</h6>
+                    <ul class="footer-list list-unstyled">
+                        <li><a href="#">Food & Beverage</a></li>
+                        <li><a href="#">Retail</a></li>
+                        <li><a href="#">Beauty Salon</a></li>
+                        <li><a href="#">Brands</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="text-uppercase mb-3">Resources</h6>
+                    <ul class="footer-list list-unstyled">
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Square Community</a></li>
+                        <li><a href="#">Developer Platform</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="text-uppercase mb-3">Contact</h6>
+                    <p class="mb-1">Customer support: 1 (855) 700-6000</p>
+                    <p class="mb-0">Sales: 1 (800) 470-1673</p>
+                </div>
+            </div>
+            <div class="footer-bottom border-top border-secondary mt-4 pt-4 d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+                <p class="mb-0 text-muted">© 2026 Square, Inc.</p>
+                <div class="footer-links d-flex flex-wrap gap-3">
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Security</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

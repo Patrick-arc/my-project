@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipping Details</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #f7f8fc;
+            --surface: #ffffff;
+            --surface-alt: #eff3fb;
+            --text: #0f172a;
+            --muted: #475569;
+            --primary: #2563eb;
+            --border: rgba(15, 23, 42, 0.08);
+        }
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(180deg, #f8fbff 0%, #eef3fb 100%);
+            color: var(--text);
+        }
+        .page-shell {
+            min-height: 100vh;
+            padding: 2.5rem 1rem 4rem;
+        }
+        .page-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .page-nav a {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .page-nav .brand {
+            font-size: 1.05rem;
+            letter-spacing: -0.03em;
+        }
+        .hero-card {
+            background: var(--surface);
+            border-radius: 32px;
+            padding: 2.5rem;
+            box-shadow: 0 28px 80px rgba(15, 23, 42, 0.08);
+            border: 1px solid var(--border);
+        }
+        .hero-card .badge-soft {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem 1rem;
+            border-radius: 999px;
+            background: rgba(37, 99, 235, 0.12);
+            color: var(--primary);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+        .hero-card h1 {
+            max-width: 760px;
+            font-size: clamp(2.5rem, 3vw, 3.5rem);
+            line-height: 1.05;
+        }
+        .hero-card p.lead {
+            color: var(--muted);
+            max-width: 760px;
+        }
+        .feature-list {
+            margin-top: 2rem;
+            display: grid;
+            gap: 0.85rem;
+        }
+        .feature-pill {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.8rem 1rem;
+            background: rgba(37, 99, 235, 0.08);
+            color: var(--primary);
+            border-radius: 999px;
+            font-weight: 600;
+            border: 1px solid rgba(37, 99, 235, 0.14);
+        }
+        .detail-panel {
+            background: var(--surface);
+            border-radius: 32px;
+            box-shadow: 0 28px 80px rgba(15, 23, 42, 0.08);
+            border: 1px solid var(--border);
+            padding: 2rem;
+        }
+        .detail-panel h2 {
+            margin-bottom: 1rem;
+        }
+        .detail-panel p {
+            color: var(--muted);
+        }
+        .detail-panel .btn-primary {
+            min-width: 200px;
+        }
+        .panel-summary {
+            display: grid;
+            gap: 1rem;
+            margin-top: 1.75rem;
+        }
+        .summary-card {
+            background: #f8fbff;
+            border-radius: 24px;
+            padding: 1.25rem;
+            border: 1px solid rgba(37, 99, 235, 0.1);
+        }
+        @media (max-width: 991px) {
+            .page-nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="page-shell container">
+        <div class="page-nav">
+            <a href="index.html" class="btn btn-outline-primary btn-sm">Back to home</a>
+            <div class="brand text-muted">Shipping settings</div>
+        </div>
+
+        <div class="row gy-4">
+            <div class="col-lg-7">
+                <section class="hero-card">
+                    <span class="badge-soft" id="shippingBadge">Loading...</span>
+                    <h1 id="shippingTitle">Shipping details</h1>
+                    <p class="lead" id="shippingDescription">Customize your shipping and pickup settings to match the way your customers shop.</p>
+                    <div class="feature-list" id="shippingFeatures"></div>
+                    <div class="mt-4 d-flex flex-wrap gap-3">
+                        <button class="btn btn-primary" id="configureButton">Configure option</button>
+                        <a href="index.html" class="btn btn-outline-primary">Choose a different option</a>
+                    </div>
+                </section>
+            </div>
+            <div class="col-lg-5">
+                <aside class="detail-panel">
+                    <h2 id="shippingHeading">Selected shipping option</h2>
+                    <p id="shippingDetailCopy">This shipping option helps you ship faster and keep customers updated.</p>
+                    <div class="panel-summary">
+                        <div class="summary-card">
+                            <h5 class="mb-2">Why this option matters</h5>
+                            <p class="text-muted mb-0">Improve checkout clarity, reduce abandoned carts, and keep fulfillment smooth.</p>
+                        </div>
+                        <div class="summary-card">
+                            <h5 class="mb-2">What customers see</h5>
+                            <p class="text-muted mb-0">Clear pricing, pickup choices, and delivery windows make buying easier.</p>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const shippingType = params.get('shippingType') || 'Shipping option';
+        const title = document.getElementById('shippingTitle');
+        const badge = document.getElementById('shippingBadge');
+        const heading = document.getElementById('shippingHeading');
+        const description = document.getElementById('shippingDescription');
+        const detailCopy = document.getElementById('shippingDetailCopy');
+        const features = document.getElementById('shippingFeatures');
+
+        title.textContent = shippingType;
+        badge.textContent = shippingType;
+        heading.textContent = shippingType;
+
+        const details = {
+            'Real-time shipping rates': {
+                text: 'Enable live shipping rates for accurate customer pricing at checkout.',
+                features: ['Carrier rate calculations', 'Discounted shipping labels', 'Automatic rate updates'],
+                summary: 'Match real carrier costs so customers see transparent shipping pricing.'
+            },
+            'Free in-store pickup': {
+                text: 'Allow customers to choose pickup at checkout and streamline order fulfillment.',
+                features: ['Pickup scheduling', 'Store pickup notifications', 'Inventory sync'],
+                summary: 'Let customers collect online orders in-store with a smooth pickup flow.'
+            },
+            'Local delivery': {
+                text: 'Offer delivery within your local area with custom fees and delivery zones.',
+                features: ['Zone-based pricing', 'Driver notes', 'Delivery window selection'],
+                summary: 'Create a local delivery experience that feels tailored and reliable.'
+            }
+        };
+
+        const selected = details[shippingType] || {
+            text: 'This shipping option is available to configure in your store settings.',
+            features: ['Flexible fulfillment', 'Customer pickup options', 'Delivery management'],
+            summary: 'This shipping option is available to configure in your store settings.'
+        };
+
+        description.textContent = selected.text;
+        detailCopy.textContent = selected.summary;
+
+        selected.features.forEach(feature => {
+            const pill = document.createElement('div');
+            pill.className = 'feature-pill';
+            pill.textContent = feature;
+            features.appendChild(pill);
+        });
+
+        document.getElementById('configureButton').addEventListener('click', () => {
+            alert(`Configure ${shippingType} in your store settings.`);
+        });
+    </script>
+</body>
+</html>
